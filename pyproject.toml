@@ -1,0 +1,40 @@
+
+[build-system]
+requires = ["setuptools>=77.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "duta-bridge"
+version = "0.1.0"
+description = "A free, local-first, permission-controlled bridge between AI applications and local filesystems."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Duta contributors" }
+]
+keywords = [
+    "duta",
+    "mcp",
+    "filesystem",
+    "ai",
+    "local-first",
+    "permissions"
+]
+dependencies = [
+    "mcp>=2.3.0,<3.0.0",
+    "starlette>=1.0",
+    "uvicorn>=0.30",
+    "python-multipart>=0.0.20"
+]
+
+[project.scripts]
+duta = "duta.cli:main"
+duta-mcp = "duta.mcp_server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,54 @@
+
+# Python environments
+venv/
+.venv/
+env/
+
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+
+# Duta local configuration and workspace data
+.duta/
+mcp_test_workspace/
+
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*_token*
+*_secret*
+oauth_code.txt
+token.json
+credentials.json
+
+# Local test and diagnostic artifacts
+check_auth.py
+diagnose_mcp.py
+hello.py
+test_http_mcp.py
+test_mcp_client.py
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Release test environments and archives
+release_test_env/
+*.zip
+
+# Temporary logs and local databases
+*.log
+*.sqlite3
+*.db
